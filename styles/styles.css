@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
 :root {
+    --transition-duration: 0.25s;
+    --transition-timing-function: ease-in-out;
     --text-primary-color: #252323;
     --text-secondary-color: #4B4B4B;
     --divider-color: #D8D8D8;
@@ -60,6 +62,8 @@ h4 {
 
 a {
     color: var(--cta-color);
+    text-decoration: none;
+    transition: all var(--transition-duration) var(--transition-timing-function);
 }
 
 a:hover {
@@ -116,25 +120,28 @@ section.hero {
     gap: 10px;
 }
 
-.hero-content>.invite-form>input {
+.invite-form>input {
+    color: var(--text-secondary-color);
+    font-family: Inter;
+    font-size: 14px;
     width: 324px;
     height: 43px;
     padding: 0 20px;
     outline: none;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    transition: box-shadow 0.25s ease-in-out
+    transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
-.hero-content>.invite-form>input::placeholder {
+.invite-form>input::placeholder {
     color: var(--placeholder-color);
 }
 
-.hero-content>.invite-form>input:focus {
+.invite-form>input:focus {
     box-shadow: inset 0 0 0 2px var(--accent-color);
 }
 
-.hero-content>.invite-form>button {
+.invite-form>button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,34 +152,138 @@ section.hero {
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.25s ease-in-out;
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.hero-content>.invite-form>button>img {
+.invite-form>button>img {
     align-items: center;
     margin: 0 0 0 8px;
     width: 14px;
     height: 14px;
-    transition: translate 0.25s ease-in-out;
+    transition: translate var(--transition-duration) var(--transition-timing-function);
 }
 
-.hero-content>.invite-form>button:hover {
+.invite-form>button:hover {
     background-color: var(--cta-hover-color);
 }
 
-.hero-content>.invite-form>button:hover img {
+.invite-form>button:hover img {
     translate: 2px 0;
+}
+
+.products {
+    margin: 32px 0;
+}
+
+.products>.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.products .card {
+    flex: 1;
+    min-width: 272px;
+    border: 1px solid var(--divider-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.products .portrait {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 16px;
+}
+
+.products .rectangle {
+    height: 159px;
+    width: 100%;
+}
+
+.products .rectangle.ultimate-guitar {
+    background-color: #FFC800;
+}
+
+.products .rectangle.muse-score {
+    background-color: #2E68C0;
+}
+
+.products .rectangle.audio-com {
+    background-color: #EA1542;
+}
+
+.products .rectangle.audacity {
+    background-color: #1D4ED8;
+}
+
+.card h4 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin-bottom: 13px;
+}
+
+.card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cta-color);
+    background-color: transparent;
+    padding: 8px 0;
+    border: none;
+    cursor: pointer;
+    transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.card button>.chevron-icon {
+    background: url('../assets/icons/chevron.svg') no-repeat center center;
+    align-items: center;
+    margin: 0 0 0 8px;
+    width: 14px;
+    height: 14px;
+    transition: translate var(--transition-duration) var(--transition-timing-function);
+}
+
+.portrait>button:hover {
+    color: var(--cta-hover-color);
+}
+
+.portrait>button:hover .chevron-icon {
+    background: url('../assets/icons/chevronHover.svg') no-repeat center center;
+    translate: 2px 0;
+}
+
+.socials>p {
+    margin: 24px 24px 0 24px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 0 24px;
 }
 
 .social-icons>a>img {
     width: 24px;
     height: 24px;
+    transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
-footer {
-    display: flex;
+.social-icons>a:hover img {
+    transform: scale(1.1);
 }
 
 footer>.additional-info {
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 32px auto;
 }
