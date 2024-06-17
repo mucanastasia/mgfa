@@ -8,7 +8,11 @@
     --bg-secondary-color: #EEF0F2;
     --cta-color: #3366FF;
     --cta-hover-color: #2B57D9;
+    --accent-color: #F8D57E;
+    --placeholder-color: #3B3B3B;
     --border-color: #C0C0C0;
+    --button-primary-color: #FFFFFF;
+    --border-radius: 8px;
 }
 
 * {
@@ -18,6 +22,7 @@
 
 body {
     font-family: Inter;
+    font-weight: 400;
     color: var(--text-secondary-color);
     background-color: var(--bg-primary-color);
 }
@@ -25,26 +30,32 @@ body {
 h1,
 h4 {
     color: var(--text-primary-color);
+    font-weight: 600;
 }
 
 h1 {
     font-size: 26px;
+    line-height: 33.8px;
 }
 
 h4 {
     font-size: 18px;
+    line-height: 23.4px;
 }
 
 .b1 {
     font-size: 16px;
+    line-height: 24px;
 }
 
 .b2 {
     font-size: 14px;
+    line-height: 21px;
 }
 
 .b3 {
     font-size: 13px;
+    line-height: 19.5px;
 }
 
 a {
@@ -53,8 +64,115 @@ a {
 
 a:hover {
     color: var(--cta-hover-color);
+    cursor: pointer;
 }
 
-.hero {
+header {
+    display: flex;
+}
+
+header>img {
+    margin: 32px auto;
+    width: 144px;
+    height: 40px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section.hero {
     background-color: var(--bg-secondary-color);
+}
+
+.hero-content,
+.products,
+.socials {
+    max-width: 640px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 0;
+}
+
+.hero-content>img {
+    border-radius: var(--border-radius);
+    width: 640px;
+    height: 293px;
+    object-fit: cover;
+}
+
+.hero-content>.invite-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.hero-content>.invite-form>input {
+    width: 324px;
+    height: 43px;
+    padding: 0 20px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: box-shadow 0.25s ease-in-out
+}
+
+.hero-content>.invite-form>input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.hero-content>.invite-form>input:focus {
+    box-shadow: inset 0 0 0 2px var(--accent-color);
+}
+
+.hero-content>.invite-form>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--button-primary-color);
+    background-color: var(--cta-color);
+    height: 45px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.hero-content>.invite-form>button>img {
+    align-items: center;
+    margin: 0 0 0 8px;
+    width: 14px;
+    height: 14px;
+    transition: translate 0.25s ease-in-out;
+}
+
+.hero-content>.invite-form>button:hover {
+    background-color: var(--cta-hover-color);
+}
+
+.hero-content>.invite-form>button:hover img {
+    translate: 2px 0;
+}
+
+.social-icons>a>img {
+    width: 24px;
+    height: 24px;
+}
+
+footer {
+    display: flex;
+}
+
+footer>.additional-info {
+    margin: 0 auto;
 }
