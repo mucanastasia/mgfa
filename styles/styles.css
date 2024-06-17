@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+:root {
+    --text-primary-color: #252323;
+    --text-secondary-color: #4B4B4B;
+    --divider-color: #D8D8D8;
+    --bg-primary-color: #FFFFFF;
+    --bg-secondary-color: #EEF0F2;
+    --cta-color: #3366FF;
+    --cta-hover-color: #2B57D9;
+    --border-color: #C0C0C0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter;
+    color: var(--text-secondary-color);
+    background-color: var(--bg-primary-color);
+}
+
+h1,
+h4 {
+    color: var(--text-primary-color);
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.b1 {
+    font-size: 16px;
+}
+
+.b2 {
+    font-size: 14px;
+}
+
+.b3 {
+    font-size: 13px;
+}
+
+a {
+    color: var(--cta-color);
+}
+
+a:hover {
+    color: var(--cta-hover-color);
+}
+
+.hero {
+    background-color: var(--bg-secondary-color);
+}
