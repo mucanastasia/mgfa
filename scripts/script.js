@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const inviteForm = document.getElementById("invite-form");
     const emailInput = document.getElementById("email");
-    const emailPattern = /^[a-zA-Z0-9.!#$%&'*+-/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const emailPattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
 
     inviteForm.addEventListener("submit", function (event) {
         event.preventDefault();
