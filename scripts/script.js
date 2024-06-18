@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inviteForm.addEventListener("submit", function (event) {
         event.preventDefault();
         if (emailInput.value === "") {
-            alert("The email field is empty.");
+            alert("Email is empty");
         } else if (emailPattern.test(emailInput.value)) {
             alert("Welcome to the team!");
             emailInput.value = "";
@@ -15,5 +15,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Most modern browsers automatically submit forms when the Enter key is pressed within a form input field.
+    // I didn’t add a separate handler for Enter key because most modern browsers already automatically submit forms when it is pressed
 });
