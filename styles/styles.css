@@ -327,6 +327,11 @@ section.hero {
     color: var(--cta-hover-color);
 }
 
+.card button>.chevron-icon:before {
+    content: url('../assets/icons/chevronHover.svg');
+    display: none;
+}
+
 .portrait>button:hover .chevron-icon {
     background: url('../assets/icons/chevronHover.svg') no-repeat center center;
     translate: 2px 0;
