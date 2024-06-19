@@ -34,57 +34,59 @@ h1,
 h4 {
     color: var(--text-primary-color);
     font-weight: 600;
+    line-height: 130%;
 }
 
 h1 {
     font-size: 26px;
-    line-height: 33.8px;
 }
 
 h4 {
     font-size: 18px;
-    line-height: 23.4px;
 }
 
-.b1 {
+.text-small,
+.text-medium,
+.text-large {
+    line-height: 150%;
+}
+
+.text-large {
     font-size: 16px;
-    line-height: 24px;
 }
 
-.b2 {
+.text-medium {
     font-size: 14px;
-    line-height: 21px;
 }
 
-.b3 {
+.text-small {
     font-size: 13px;
-    line-height: 19.5px;
 }
 
 button {
-    cursor: pointer;
     font-family: Inter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 603px) {
     h1 {
         font-size: 22px;
-        line-height: 28.6px;
     }
 
-    .hero-content>p.b1 {
+    .hero-content>p.text-large {
         font-size: 14px;
-        line-height: 21px;
     }
 
-    .hero-content>p.b2 {
+    .hero-content>p.text-medium {
         font-size: 14px;
-        line-height: 21px;
     }
 
-    .b3 {
+    .text-small {
         font-size: 11px;
-        line-height: 17px;
     }
 }
 
@@ -179,20 +181,16 @@ section.hero {
 }
 
 .invite-form>button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--button-primary-color);
     background-color: var(--cta-color);
     height: 45px;
     padding: 12px 24px;
-    border: none;
     border-radius: var(--border-radius);
-    cursor: pointer;
     transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.invite-form>button>img {
+.invite-form>button>.arrow-right-icon {
+    background: url('../assets/icons/arrowRight.svg') no-repeat center center;
     align-items: center;
     margin: 0 0 0 8px;
     width: 14px;
@@ -204,7 +202,7 @@ section.hero {
     background-color: var(--cta-hover-color);
 }
 
-.invite-form>button:hover img {
+.invite-form>button:hover .arrow-right-icon {
     translate: 2px 0;
 }
 
@@ -310,14 +308,9 @@ section.hero {
 }
 
 .card button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--cta-color);
     background-color: transparent;
     padding: 6px 0;
-    border: none;
-    cursor: pointer;
     transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
